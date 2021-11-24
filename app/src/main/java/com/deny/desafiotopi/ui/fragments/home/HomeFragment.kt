@@ -23,6 +23,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
+    private var listaUsers: List<User> = arrayListOf()
 
     private val binding get() = _binding!!
 
@@ -39,6 +40,7 @@ class HomeFragment : Fragment() {
 
         homeViewModel.listaUser.observe(viewLifecycleOwner, Observer { listaUsuario ->
             //Collections.sort(listaUsuario, SortBy())
+            listaUsers = listaUsuario
             binding.recyclerViewUser.adapter = UserAdapter(listaUsuario)
             binding.recyclerViewUser.layoutManager = GridLayoutManager(requireContext(), 2)
         })

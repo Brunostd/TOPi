@@ -1,8 +1,10 @@
 package com.deny.desafiotopi.ui.fragments.home
 
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.deny.desafiotopi.MainActivity
 import com.deny.desafiotopi.model.GestorUser
 import com.deny.desafiotopi.model.User
 

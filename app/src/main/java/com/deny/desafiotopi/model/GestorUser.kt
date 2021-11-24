@@ -1,5 +1,8 @@
 package com.deny.desafiotopi.model
 
+import android.content.Context
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.deny.desafiotopi.api.DataService
@@ -28,7 +31,7 @@ class GestorUser {
             }
 
             override fun onFailure(call: Call<List<User>>, t: Throwable) {
-                TODO("Not yet implemented")
+                TODO()
             }
 
         })
