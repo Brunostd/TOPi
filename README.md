@@ -2,7 +2,7 @@
 - 👋 Olá, meu nome é Bruno Brito
   
   ##
-  <h1><p>Skills utilizadas no projeto</p></h1>
+  # Skills utilizadas no projeto
   - MVVM
   - Retrofit
   - Glide
