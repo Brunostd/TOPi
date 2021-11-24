@@ -1,10 +1,7 @@
 package com.deny.desafiotopi.model
 
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.recyclerview.widget.GridLayoutManager
-import com.deny.desafiotopi.adapter.UserAdapter
 import com.deny.desafiotopi.api.DataService
 import retrofit2.Call
 import retrofit2.Callback

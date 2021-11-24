@@ -1,4 +1,4 @@
-package com.deny.desafiotopi.adapter
+package com.deny.desafiotopi.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View

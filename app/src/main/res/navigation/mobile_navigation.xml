@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.deny.desafiotopi.ui.home.HomeFragment"
+        android:name="com.deny.desafiotopi.ui.fragments.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,19 +16,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.deny.desafiotopi.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.deny.desafiotopi.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-    <fragment
         android:id="@+id/repositoryFragment"
-        android:name="com.deny.desafiotopi.ui.repository.RepositoryFragment"
+        android:name="com.deny.desafiotopi.ui.fragments.repository.RepositoryFragment"
         android:label="Repository"
         tools:layout="@layout/fragment_repository" >
         <action

@@ -1,4 +1,4 @@
-package com.deny.desafiotopi.adapter
+package com.deny.desafiotopi.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -14,9 +13,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.deny.desafiotopi.R
 import com.deny.desafiotopi.model.User
-import com.deny.desafiotopi.ui.home.HomeFragmentDirections
+import com.deny.desafiotopi.ui.fragments.home.HomeFragmentDirections
 import jp.wasabeef.glide.transformations.CropCircleTransformation
-import retrofit2.Response.error
 
 class UserAdapter(var listaUsuarios: List<User>): RecyclerView.Adapter<UserAdapter.MyViewHolder>() {
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view){

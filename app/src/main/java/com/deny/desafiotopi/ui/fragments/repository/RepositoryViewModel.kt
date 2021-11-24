@@ -1,8 +1,7 @@
-package com.deny.desafiotopi.ui.repository
+package com.deny.desafiotopi.ui.fragments.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.deny.desafiotopi.model.GestorUserRepository
 import com.deny.desafiotopi.model.UserRepository
 
 class RepositoryViewModel: ViewModel() {

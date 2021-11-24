@@ -1,11 +1,9 @@
 package com.deny.desafiotopi
 
-import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.widget.SearchView
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -14,12 +12,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.MenuItemCompat
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.deny.desafiotopi.databinding.ActivityMainBinding
-import com.deny.desafiotopi.ui.home.HomeViewModel
 import android.app.SearchManager as SearchManager
 
 class MainActivity : AppCompatActivity() {
@@ -42,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

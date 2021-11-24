@@ -1,4 +1,4 @@
-package com.deny.desafiotopi.ui.repository
+package com.deny.desafiotopi.ui.fragments.repository
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,28 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
-import android.widget.Toast
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.deny.desafiotopi.MainActivity
-import com.deny.desafiotopi.R
-import com.deny.desafiotopi.adapter.RepositoryAdapter
-import com.deny.desafiotopi.adapter.UserAdapter
-import com.deny.desafiotopi.api.DataService
+import com.deny.desafiotopi.ui.adapter.RepositoryAdapter
 import com.deny.desafiotopi.databinding.FragmentRepositoryBinding
 import com.deny.desafiotopi.model.GestorUserRepository
-import com.deny.desafiotopi.model.User
 import com.deny.desafiotopi.model.UserRepository
-import com.deny.desafiotopi.ui.home.HomeFragment
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
 import kotlin.Comparator
 

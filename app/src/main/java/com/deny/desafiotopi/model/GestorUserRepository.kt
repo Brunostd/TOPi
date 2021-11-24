@@ -2,9 +2,7 @@ package com.deny.desafiotopi.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.navigation.fragment.navArgs
 import com.deny.desafiotopi.api.DataService
-import com.deny.desafiotopi.ui.repository.RepositoryFragmentArgs
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

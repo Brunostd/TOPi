@@ -1,34 +1,21 @@
-package com.deny.desafiotopi.ui.home
+package com.deny.desafiotopi.ui.fragments.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.deny.desafiotopi.R
-import com.deny.desafiotopi.adapter.UserAdapter
-import com.deny.desafiotopi.api.DataService
-import com.deny.desafiotopi.api.UserService
+import com.deny.desafiotopi.ui.adapter.UserAdapter
 import com.deny.desafiotopi.databinding.FragmentHomeBinding
 import com.deny.desafiotopi.model.User
-import com.google.gson.Gson
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
 import kotlin.Comparator
-import android.text.Html
 import com.deny.desafiotopi.MainActivity
 
 

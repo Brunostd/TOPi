@@ -1,4 +1,4 @@
-package com.deny.desafiotopi.ui.home
+package com.deny.desafiotopi.ui.fragments.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
