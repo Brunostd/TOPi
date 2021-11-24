@@ -5,9 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.deny.desafiotopi.MainActivity
 import com.deny.desafiotopi.ui.adapter.UserAdapter
 import com.deny.desafiotopi.databinding.ActivitySearchBinding
 import com.deny.desafiotopi.model.User
@@ -41,6 +43,8 @@ class SearchActivity : AppCompatActivity() {
             binding.recyclerViewSearch.layoutManager = GridLayoutManager(applicationContext, 2)
         })
 
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         setContentView(view)
     }
     fun hendleSearch(intent: Intent){
@@ -50,5 +54,12 @@ class SearchActivity : AppCompatActivity() {
             Log.d("resultado", "resultado: "+q)
             recebePesquisa = q
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val myIntent = Intent(applicationContext, MainActivity::class.java)
+        startActivityForResult(myIntent, 0)
+        finish()
+        return true
     }
 }
