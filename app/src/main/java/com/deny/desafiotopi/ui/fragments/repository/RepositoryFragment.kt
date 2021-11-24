@@ -24,13 +24,9 @@ class RepositoryFragment : Fragment() {
 
     private val args by navArgs<RepositoryFragmentArgs>()
     private var _binding: FragmentRepositoryBinding? = null
-    private lateinit var retrofit: Retrofit
 
     private lateinit var repositoryViewModel: RepositoryViewModel
 
-    private var listaRepository: List<UserRepository> = arrayListOf()
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -78,34 +74,6 @@ class RepositoryFragment : Fragment() {
             return Integer.parseInt(b.stargazers_count).compareTo(Integer.parseInt(a.stargazers_count))
         }
     }
-
-    /*fun recuperarListaRepository(){
-        var service: DataService = retrofit.create(DataService::class.java)
-        var call: Call<List<UserRepository>> = service.recuperarListaRepository(args.nameUsuario)
-
-        call.enqueue(object: Callback<List<UserRepository>>{
-            override fun onResponse(call: Call<List<UserRepository>>, response: Response<List<UserRepository>>) {
-                if (response.isSuccessful){
-                    listaRepository = response.body()!!
-
-                    var i = 0
-                    while (i < listaRepository.size){
-                        listaRepository.get(i).avatar = args.avatar
-                        i++
-                    }
-
-                    Toast.makeText(requireContext(), "Sucesso", Toast.LENGTH_SHORT).show()
-                    binding.recyclerViewRepository.adapter = RepositoryAdapter(listaRepository)
-                    binding.recyclerViewRepository.layoutManager = LinearLayoutManager(requireContext())
-                }
-            }
-
-            override fun onFailure(call: Call<List<UserRepository>>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
-
-        })
-    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -23,13 +23,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
-    private var listaUsers: List<User> = arrayListOf()
-    private var auxAdapter = UserAdapter(listaUsers)
 
-    private lateinit var retrofit: Retrofit
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -45,7 +39,6 @@ class HomeFragment : Fragment() {
 
         homeViewModel.listaUser.observe(viewLifecycleOwner, Observer { listaUsuario ->
             //Collections.sort(listaUsuario, SortBy())
-            listaUsers = listaUsuario
             binding.recyclerViewUser.adapter = UserAdapter(listaUsuario)
             binding.recyclerViewUser.layoutManager = GridLayoutManager(requireContext(), 2)
         })
@@ -73,62 +66,6 @@ class HomeFragment : Fragment() {
             return a.login.compareTo(b.login)
         }
     }
-
-    /*fun recuperarListaUserRetrofit(){
-        var service: DataService = retrofit.create(DataService::class.java)
-        var call: Call<List<User>> = service.recuperarListaUsuario()
-
-        call.enqueue(object: Callback<List<User>>{
-            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
-                if (response.isSuccessful){
-                    listaUsers = response.body()!!
-                    Toast.makeText(requireContext(), "Sucesso", Toast.LENGTH_SHORT).show()
-                    binding.recyclerViewUser.adapter = UserAdapter(listaUsers)
-                    binding.recyclerViewUser.layoutManager = GridLayoutManager(requireContext(), 2)
-                }
-            }
-
-            override fun onFailure(call: Call<List<User>>, t: Throwable) {
-                Toast.makeText(requireContext(), "Falha", Toast.LENGTH_SHORT).show()
-            }
-
-        })
-    }*/
-
-    /*fun recuperarUserRetrofit(){
-        var userRetrofit: UserService = retrofit.create( UserService::class.java )
-        var call: Call<User> = userRetrofit.recuperarUsuario("iluwatar")
-
-        call.enqueue(object: Callback<User>{
-            override fun onResponse(call: Call<User>, response: Response<User>) {
-                if(response.isSuccessful){
-                    var user: User? = response.body()
-                    binding.textViewRetrofit.setText(user?.login + " / "+ user?.avatar_url)
-                }
-            }
-
-            call.enqueue(object: Callback<List<User>>{
-            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
-                if (response.isSuccessful){
-                    listaUsers = response.body()!!
-                    Toast.makeText(requireContext(), "Sucesso", Toast.LENGTH_SHORT).show()
-                    binding.recyclerViewUsers.adapter = UserAdapter(listaUsers)
-                    binding.recyclerViewUsers.layoutManager = GridLayoutManager(requireContext(), 2)
-                }
-            }
-
-            override fun onFailure(call: Call<List<User>>, t: Throwable) {
-                Toast.makeText(requireContext(), "Falha", Toast.LENGTH_SHORT).show()
-            }
-
-        })
-
-            override fun onFailure(call: Call<User>, t: Throwable) {
-                TODO("Not yet implemented")
-            }
-
-        })
-    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()
