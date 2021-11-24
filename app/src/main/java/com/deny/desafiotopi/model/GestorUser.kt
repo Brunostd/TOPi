@@ -25,7 +25,7 @@ class GestorUser {
         var call: Call<List<User>> = service.recuperarListaUsuario()
         //var auxListUserData: List<User> = arrayListOf()
 
-        call.enqueue(object : Callback<List<User>>{
+        call.enqueue(object: Callback<List<User>>{
             override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
                 listaUser.value = response.body()!!
             }
